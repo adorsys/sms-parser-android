@@ -8,6 +8,6 @@ echo -e "Start install module"
 ./gradlew :smsparser:install
 echo -e "Finished install"
 
-#echo -e "Start bintrayUpload"
-#./gradlew :smsparser:bintrayUpload
-#echo -e "Finished bintrayUpload"
+echo -e "Start bintrayUpload"
+./gradlew :smsparser:bintrayUpload
+echo -e "Finished bintrayUpload"
