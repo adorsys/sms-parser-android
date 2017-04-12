@@ -9,7 +9,7 @@ android:
   - tools
   - platform-tools
   - android-25
-  - build-tools-25.0.2
+  - build-tools-25.3.1
   - extra-android-m2repository
   - extra-google-m2repository
   - extra-android-support
@@ -27,7 +27,7 @@ android:
     - $HOME/.gradle/daemon
     - $HOME/.gradle/native
     - $HOME/.gradle/wrapper
-#after_success:
-#  - ./bintray-upload.sh
+after_success:
+  - ./bintray-upload.sh
 
 
