@@ -16,6 +16,10 @@ import android.util.Log;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Drilon Reçica
+ */
+
 public class SmsReceiver extends BroadcastReceiver {
     public static final String INTENT_ACTION_SMS = "intent_action_sms";
     public static final String KEY_SMS_SENDER = "key_sms_sender";

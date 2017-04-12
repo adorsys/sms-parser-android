@@ -8,6 +8,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 
+/**
+ * @author Drilon Reçica
+ */
+
 public final class SmsTool {
     public static final int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
