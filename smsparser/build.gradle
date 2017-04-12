@@ -29,7 +29,7 @@ dependencies {
 
 ext {
     bintrayRepo = 'adorsys'
-    bintrayName = 'securestorage'
+    bintrayName = 'smsparser'
 
     publishedGroupId = 'de.adorsys.android'
     libraryName = 'smsparser'
