@@ -3,6 +3,10 @@ package de.adorsys.android.smsparser;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+/**
+ * @author Drilon Reçica
+ */
+
 public enum SmsConfig {
     INSTANCE;
 

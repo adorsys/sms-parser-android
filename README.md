@@ -2,6 +2,8 @@
 
 ## Receiving and Parsing SMS Messages on Android Devices
 
+[![Build Status](https://travis-ci.org/adorsys/sms-parser-android.svg?branch=develop)](https://travis-ci.org/adorsys/sms-parser-android)
+
 ### Introduction
 
 This module was created for getting specific codes out of incoming SMS messages.

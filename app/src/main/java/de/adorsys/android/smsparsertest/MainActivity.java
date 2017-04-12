@@ -19,6 +19,10 @@ import de.adorsys.android.smsparser.SmsConfig;
 import de.adorsys.android.smsparser.SmsReceiver;
 import de.adorsys.android.smsparser.SmsTool;
 
+/**
+ * @author Drilon Reçica
+ */
+
 public class MainActivity extends AppCompatActivity {
     @NonNull
     private TextView smsSenderTextView;
