@@ -3,6 +3,7 @@
 ## Receiving and Parsing SMS Messages on Android Devices
 
 [![Build Status](https://travis-ci.org/adorsys/sms-parser-android.svg?branch=master)](https://travis-ci.org/adorsys/sms-parser-android)
+[![Download](https://api.bintray.com/packages/andev/adorsys/smsparser/images/download.svg)](https://bintray.com/andev/adorsys/smsparser/_latestVersion)
 
 ### Introduction
 
