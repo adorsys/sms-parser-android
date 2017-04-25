@@ -35,7 +35,7 @@ For more info read ___Usage___.
 Add the module to your apps build.gradle:
 
 ```golang
-compile project(':smsparser')
+compile 'de.adorsys.android:smsparser:0.0.3'
 ```
 
 First of all you have to create a Config object to configure the modules use:
