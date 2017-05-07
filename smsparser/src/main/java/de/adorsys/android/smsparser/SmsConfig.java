@@ -14,7 +14,7 @@ public enum SmsConfig {
     private String endIndex;
     private String[] smsSenderNumbers;
 
-    public void initializeSmsConfig(@NonNull String beginIndex, @NonNull String endIndex, @NonNull String... smsSenderNumbers) {
+    public void initializeSmsConfig(@Nullable String beginIndex, @Nullable String endIndex, @NonNull String... smsSenderNumbers) {
         this.beginIndex = beginIndex;
         this.endIndex = endIndex;
         this.smsSenderNumbers = smsSenderNumbers;

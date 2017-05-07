@@ -105,7 +105,7 @@ public class SmsReceiver extends BroadcastReceiver {
 
             return message.substring(startIndex, endIndex).replace(beginIndexSingleton, "").trim();
         } else {
-            return null;
+            return message;
         }
     }
 }
