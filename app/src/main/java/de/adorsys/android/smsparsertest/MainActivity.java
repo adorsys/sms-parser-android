@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2017 adorsys GmbH & Co. KG
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package de.adorsys.android.smsparsertest;
 
 import android.content.BroadcastReceiver;
@@ -18,10 +33,6 @@ import android.widget.Toast;
 import de.adorsys.android.smsparser.SmsConfig;
 import de.adorsys.android.smsparser.SmsReceiver;
 import de.adorsys.android.smsparser.SmsTool;
-
-/**
- * @author Drilon Reçica
- */
 
 public class MainActivity extends AppCompatActivity {
     @NonNull
@@ -91,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        smsSenderTextView = (TextView) findViewById(R.id.sms_sender_text_view);
-        smsMessageTextView = (TextView) findViewById(R.id.sms_message_text_view);
+        smsSenderTextView = findViewById(R.id.sms_sender_text_view);
+        smsMessageTextView = findViewById(R.id.sms_message_text_view);
 
         smsSenderTextView.setText(getString(R.string.text_sms_sender_number, ""));
         smsMessageTextView.setText(getString(R.string.text_sms_message, ""));
