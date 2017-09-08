@@ -102,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        smsSenderTextView = (TextView) findViewById(R.id.sms_sender_text_view);
-        smsMessageTextView = (TextView) findViewById(R.id.sms_message_text_view);
+        smsSenderTextView = findViewById(R.id.sms_sender_text_view);
+        smsMessageTextView = findViewById(R.id.sms_message_text_view);
 
         smsSenderTextView.setText(getString(R.string.text_sms_sender_number, ""));
         smsMessageTextView.setText(getString(R.string.text_sms_message, ""));

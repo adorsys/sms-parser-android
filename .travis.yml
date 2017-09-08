@@ -29,5 +29,3 @@ android:
     - $HOME/.gradle/wrapper
 after_success:
   - ./bintray-upload.sh
-
-
