@@ -4,6 +4,10 @@
 
 [![Build Status](https://travis-ci.org/adorsys/sms-parser-android.svg?branch=master)](https://travis-ci.org/adorsys/sms-parser-android)
 [![Download](https://api.bintray.com/packages/andev/adorsys/smsparser/images/download.svg)](https://bintray.com/andev/adorsys/smsparser/_latestVersion)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SMS%20Parser%20Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5652)
+[![API](https://img.shields.io/badge/API-14%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=14)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ### Introduction
 
@@ -103,3 +107,9 @@ You must create register and unregister methods for the BroadcastReceiver and ca
     }
 ```
 
+
+
+### Contributors:
+[@drilonreqica](https://github.com/drilonreqica)
+
+[@itsmortoncornelius](https://github.com/itsmortoncornelius)
