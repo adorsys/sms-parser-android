@@ -33,6 +33,6 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-task('pV') << {
+task('pV').doLast {
     println "${versionName}"
 }
