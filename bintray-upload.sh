@@ -13,5 +13,5 @@ if [ "$TRAVIS_BRANCH" == "master" ]; then
     ./gradlew :smsparser:bintrayUpload
     echo -e "\033[0;32m Finished bintrayUpload \033[0m"
 else
-   echo "\033[0;32m Current branch is not master, will not upload to bintray. \033[0m"
+   echo -e "\033[0;32m Current branch is not master, will not upload to bintray. \033[0m"
 fi
