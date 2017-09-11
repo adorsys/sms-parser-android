@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
                                            @NonNull int[] grantResults) {
         // If request is cancelled, the result arrays are empty.
         if (requestCode == SmsTool.REQUEST_CODE_ASK_PERMISSIONS
-                && grantResults.length <= 0
-                || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                && (grantResults.length <= 0
+                || grantResults[0] != PackageManager.PERMISSION_GRANTED)) {
             Toast.makeText(this, getString(R.string.warning_permission_not_granted),
                     Toast.LENGTH_LONG).show();
             startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
