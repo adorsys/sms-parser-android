@@ -26,6 +26,10 @@ import android.support.v4.content.ContextCompat;
 public final class SmsTool {
     public static final int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
+    //private constructor to disable initialization
+    private SmsTool() {
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     public static void requestSMSPermission(@NonNull Activity activity) {
         final String permission = Manifest.permission.RECEIVE_SMS;
