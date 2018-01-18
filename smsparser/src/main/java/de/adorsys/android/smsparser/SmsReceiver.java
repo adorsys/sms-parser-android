@@ -22,7 +22,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.BuildConfig;
 import android.support.v4.content.LocalBroadcastManager;
 import android.telephony.SmsMessage;
 import android.text.TextUtils;
@@ -41,7 +40,7 @@ public class SmsReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String[] senderArray = SmsConfig.INSTANCE.getSmsSenderNumbers();
-        if (intent.getAction().equals(INTENT_ACTION_SMS_RECEIVED) && senderArray != null) {
+        if (INTENT_ACTION_SMS_RECEIVED.equals(intent.getAction()) && senderArray != null) {
             List<String> smsSenderNumbers = Arrays.asList(senderArray);
             Bundle bundle = intent.getExtras();
             SmsMessage[] smsMessages;

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(SmsReceiver.INTENT_ACTION_SMS)) {
+            if (SmsReceiver.INTENT_ACTION_SMS.equals(intent.getAction())) {
                 String receivedSender = intent.getStringExtra(SmsReceiver.KEY_SMS_SENDER);
                 String receivedMessage = intent.getStringExtra(SmsReceiver.KEY_SMS_MESSAGE);
                 smsSenderTextView.setText(getString(R.string.text_sms_sender_number,
