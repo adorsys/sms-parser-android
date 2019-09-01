@@ -33,7 +33,7 @@ matrix:
     - env: API=28
       stage: Deploy
       script:
-        - bash .travis/bintray_upload.sh
+        - bash .travis/bintray-upload.sh
 
 android:
   components:
