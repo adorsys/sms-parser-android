@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String permissions[],
+                                           @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         // If request is cancelled, the result arrays are empty.
         if (requestCode == SmsTool.REQUEST_CODE_ASK_PERMISSIONS

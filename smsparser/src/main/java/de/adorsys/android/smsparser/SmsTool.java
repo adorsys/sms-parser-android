@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package de.adorsys.android.smsparser;
 
 import android.Manifest;
@@ -23,6 +24,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
+@SuppressWarnings("PMD")
 public final class SmsTool {
     public static final int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
