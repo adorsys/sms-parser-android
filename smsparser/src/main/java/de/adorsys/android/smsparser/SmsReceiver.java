@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package de.adorsys.android.smsparser;
 
 import android.content.BroadcastReceiver;
@@ -20,9 +21,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.LocalBroadcastManager;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.telephony.SmsMessage;
 import android.text.TextUtils;
 import android.util.Log;
@@ -70,11 +73,11 @@ public class SmsReceiver extends BroadcastReceiver {
                     }
                     if (!TextUtils.isEmpty(messageFrom)
                             && smsSenderNumbers.contains(messageFrom)) {
-                        String receivedMessage = "";
+                        StringBuilder receivedMessage = new StringBuilder();
                         for (SmsMessage smsMessage : smsMessages) {
-                            receivedMessage = receivedMessage + smsMessage.getMessageBody();
+                            receivedMessage.append(smsMessage.getMessageBody());
                         }
-                        sendBroadcast(context, messageFrom, receivedMessage);
+                        sendBroadcast(context, messageFrom, receivedMessage.toString());
                     } else {
                         sendBroadcast(context, null, null);
                     }
@@ -94,6 +97,7 @@ public class SmsReceiver extends BroadcastReceiver {
                 smsCode = getSmsCode(smsMessage);
             } catch (StringIndexOutOfBoundsException e) {
                 if (BuildConfig.DEBUG) {
+                    //noinspection ConstantConditions
                     Log.d(SmsReceiver.class.getName(), e.getMessage());
                 }
             }
@@ -104,7 +108,7 @@ public class SmsReceiver extends BroadcastReceiver {
         LocalBroadcastManager.getInstance(context).sendBroadcast(broadcastIntent);
     }
 
-    @Nullable
+    @NonNull
     private String getSmsCode(@NonNull String message) {
         String beginIndexSingleton = SmsConfig.INSTANCE.getBeginIndex();
         String endIndexSingleton = SmsConfig.INSTANCE.getEndIndex();
