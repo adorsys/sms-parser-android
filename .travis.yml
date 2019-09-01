@@ -28,8 +28,8 @@ matrix:
     - env: API=28
       stage: Build
       script:
-        - ./gradlew :securepreferencesx:clean --stacktrace
-        - ./gradlew :securepreferencesx:build --stacktrace
+        - ./gradlew :smsparser:clean --stacktrace
+        - ./gradlew :smsparser:build --stacktrace
     - env: API=28
       stage: Deploy
       script:
