@@ -41,7 +41,7 @@ publish {
     def artifactProjectID = 'smsparser'
     def publishVersionID = "${versionName}"
     userOrg = 'andev'
-    repoName = 'adrosys'
+    repoName = 'adorsys'
     groupId = groupProjectID
     artifactId = artifactProjectID
     publishVersion = publishVersionID
