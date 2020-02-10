@@ -1,0 +1,36 @@
+name: Release SMS-parser
+
+on:
+  tags:
+    - '*'
+
+jobs:
+  assemble:
+    name: AssembleDebug SMS-parser
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: AssembleDebug SMS-parser
+        run: bash ./gradlew assembleDebug --stacktrace
+
+  publish:
+    needs: [assemble]
+    name: Publish SMS-parser
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Publish SMS-parser
+        env:
+          BINTRAY_API_KEY: ${{secrets.BINTRAY_API_KEY}}
+          BINTRAY_USERNAME: andev
+        run: bash .buildscripts/build-and-deplay-snapshot.sh
