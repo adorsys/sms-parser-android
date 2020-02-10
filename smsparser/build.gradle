@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
-
+apply plugin: 'com.novoda.bintray-release'
 // Apply static code analysis configuration
 apply from: './checks.gradle'
 
@@ -23,38 +22,29 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation "androidx.core:core-ktx:1.2.0-alpha03"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.core:core-ktx:1.2.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-ext {
-    bintrayRepo = 'adorsys'
-    bintrayName = 'smsparser'
-
-    publishedGroupId = 'de.adorsys.android'
-    libraryName = 'smsparser'
-    artifact = 'smsparser'
-
-    libraryDescription = 'smsparser'
-
-    siteUrl = 'https://www.adorsys.de/'
-    gitUrl = 'https://github.com/adorsys/sms-parser-android.git'
-
-    libraryVersion = "${versionName}"
-
-    developerId = 'andev'
-    developerName = 'Andev Adorsys'
-    developerEmail = 'adorsys.andev@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
+publish {
+    def groupProjectID = 'de.adorsys.android'
+    def artifactProjectID = 'smsparser'
+    def publishVersionID = "${versionName}"
+    userOrg = 'andev'
+    repoName = 'adrosys'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = artifactProjectID
+    website = 'https://github.com/adorsys/sms-parser-android.git'
 }
-
-apply from: 'https://raw.githubusercontent.com/adorsys/jcenter-distribution/master/installv.gradle'
-apply from: 'https://raw.githubusercontent.com/adorsys/jcenter-distribution/master/bintrayv.gradle'
