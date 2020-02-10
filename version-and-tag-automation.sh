@@ -23,11 +23,11 @@ echo "Incrementing versionCode by 1 ..."
 # If versionCode is set with = (ex. versionCode = X) change {print $2} to {print $3}
 for entry in `awk '/ext.versionCode/ {print $3}' ./build.gradle`; do
     index=`echo ${entry}`
-    sedi 's/ext.versionCode [0-9a-zA-Z -_]*/versionCode '$(($index + 1))'/' ./build.gradle
+    sedi 's/ext.versionCode [0-9a-zA-Z -_]*/ext.versionCode = '$(($index + 1))'/' ./build.gradle
 done
 
 # If versionCode is set with = (ex. versionCode = X) change {print $2} to {print $3}
-newVersionCode=$(awk '/ext.versionCode/ {print $3}' ./build.gradle)
+newVersionCode=$(awk '/ext.versionCode =/ {print $3}' ./build.gradle)
 
 echo "New versionCode is: $newVersionCode"
 
@@ -42,7 +42,7 @@ read -r newVersionName
 
 echo "Setting new versionName..."
 
-sedi 's/ext.versionName [0-9a-zA-Z -_]*/ext.versionName "'"$newVersionName"'"/' ./build.gradle
+sedi 's/ext.versionName [0-9a-zA-Z -_]*/ext.versionName = "'"$newVersionName"'"/' ./build.gradle
 
 echo "New versionName is: $newVersionName"
 
