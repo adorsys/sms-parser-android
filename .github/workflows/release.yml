@@ -1,8 +1,9 @@
 name: Release SMS-parser
 
 on:
-  tags:
-    - '*'
+  push:
+    tags:
+      - '*'
 
 jobs:
   assemble:
