@@ -34,4 +34,4 @@ jobs:
         env:
           BINTRAY_API_KEY: ${{secrets.BINTRAY_API_KEY}}
           BINTRAY_USERNAME: andev
-        run: bash .buildscripts/build-and-deplay-snapshot.sh
+        run: bash .buildscripts/build-and-deploy-snapshot.sh
